@@ -13,4 +13,4 @@ const lockerSchema = mongoose.Schema({
     HeightLevel: String,
     Price: Number
 })
-exports.Lockers = mongoose.model("Lockers",lockerSchema);
+module.exports = mongoose.model("Lockers", lockerSchema);

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const OfficeSchema= mongoose.Schema({
     OfficeID:{
-        type:String,
+        type: String,
         unique: true
     },
     UserID: {type: mongoose.Schema.Types.ObjectId,
@@ -13,4 +13,4 @@ const OfficeSchema= mongoose.Schema({
     OfficeType:String,
     OfficeLocation:String,    
 })
-module.exports = mongoose.model("Offices",OfficeSchema);
+module.exports = mongoose.model("Offices", OfficeSchema);

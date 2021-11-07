@@ -8,4 +8,4 @@ const AdminSchema = mongoose.Schema({
     AdminPassword:String,
     AdminPhoneNumber:Number
 })
-exports.Admin = mongoose.model('Admin',AdminSchema);
+module.exports = mongoose.model('Admin', AdminSchema);

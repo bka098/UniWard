@@ -14,4 +14,4 @@ const RentSchema = mongoose.Schema({
     }
 })
 
-exports.Rent = mongoose.model("Rent",RentSchema);
+module.exports = mongoose.model("Rent", RentSchema);
