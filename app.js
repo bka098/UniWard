@@ -3,7 +3,6 @@ const app = express();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
-
 const api = process.env.API_URl;
 
 //Routers
@@ -11,6 +10,17 @@ const lockerRouter = require('./Routers/Locker');
 const AdminRouter = require('./Routers/Admin');
 const UserRouter = require('./Routers/User');
 const OfficeRouter = require('./Routers/Offices');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//Headers
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
+  next();
+});
 
 //Middleware
 app.use(express.json());
@@ -35,4 +45,6 @@ app.listen(3000, ()=>{
     console.log('server is running http://localhost:3000');
     console.log
 })
+
+
 
