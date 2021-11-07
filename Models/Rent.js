@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 const RentSchema = mongoose.Schema({
-    RentID: String,
+    RentID:  {type: String,
+        unique: true},
     DateOfRent: [Date],
     UserID:{
         type: mongoose.Schema.Types.ObjectId,
