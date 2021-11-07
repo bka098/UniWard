@@ -8,7 +8,7 @@ const RentSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-    OfficeID:{
+    LockerID:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Lockers',
     }

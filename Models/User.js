@@ -11,7 +11,7 @@ const UserSchema = mongoose.Schema({
     UserPhoneNumber: String,
     UserEmail:String,
     UserType: String,
-    UserFaclutyType:String
+    UserFacultyType:String
 })
 
 exports.User = mongoose.model('User', UserSchema);

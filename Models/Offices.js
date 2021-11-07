@@ -5,11 +5,12 @@ const OfficeSchema= mongoose.Schema({
         type:String,
         unique: true
     },
-    UserID: String,
+    UserID: {type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'},
     OfficeStatus:String,
-    RequestID:String,
-    FaclutyType:String,
+    RequestID:{type: mongoose.Schema.Types.ObjectId,
+        ref: 'Request'},
     OfficeType:String,
     OfficeLocation:String,    
 })
-exports.Offices = mongoose.model("Offices",OfficeSchema);
+module.exports = mongoose.model("Offices",OfficeSchema);

@@ -6,10 +6,6 @@ const AdminSchema = mongoose.Schema({
     AdminType:String,
     AdminName:String,
     AdminPassword:String,
-    AdminPhoneNumber:Number,
-    isSupervisor:{
-        type: Boolean,
-        default: false
-    }
+    AdminPhoneNumber:Number
 })
 exports.Admin = mongoose.model('Admin',AdminSchema);

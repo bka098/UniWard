@@ -1,4 +1,5 @@
 const Lockers = require('../Models/Lockers');
+const {Rent} = require('../Models/Rent');
 const express = require('express');
 const router = express.Router();
 
