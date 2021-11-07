@@ -5,10 +5,11 @@ const mongoose = require('mongoose');
 
 
 const api = process.env.API_URl;
-const lockerRouter = require('../Routers/Lockers');
-const AdminRouter = require('../Routers/Admin');
-const UserRouter = require('../Routers/User');
-const OfficeRouter = require('../Routers/Offices');
+//Routers
+const lockerRouter = require('./Routers/Lockers');
+const AdminRouter = require('./Routers/Admin');
+const UserRouter = require('./Routers/User');
+const OfficeRouter = require('./Routers/Offices');
 //Middleware
 app.use(express.json());
 app.use(morgan('tiny'));
@@ -19,7 +20,7 @@ require('dotenv/config');
 app.use(`${api}/lockers`,lockerRouter);
 app.use(`${api}/Admin`,AdminRouter);
 app.use(`${api}/User`,UserRouter);
-app.use(`${api}/Office`,UserRouter);
+app.use(`${api}/Office`,OfficeRouter);
 
 mongoose.connect(process.env.ConnectionDB)
 .then(()=>{

@@ -10,6 +10,6 @@ const lockerSchema = mongoose.Schema({
     Location: String,
     Size: String,
     HeightLevel: String,
-    Price: number
+    Price: Number
 })
-exports.Lockers = mongoose.model("Lockers",LockerSchema);
+exports.Lockers = mongoose.model("Lockers",lockerSchema);
