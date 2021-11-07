@@ -5,16 +5,17 @@ const mongoose = require('mongoose');
 
 
 const api = process.env.API_URl;
+
 //Routers
-const lockerRouter = require('./Routers/Lockers');
+const lockerRouter = require('./Routers/Locker');
 const AdminRouter = require('./Routers/Admin');
 const UserRouter = require('./Routers/User');
 const OfficeRouter = require('./Routers/Offices');
+
 //Middleware
 app.use(express.json());
 app.use(morgan('tiny'));
 require('dotenv/config');
-
 
 //Routers
 app.use(`${api}/lockers`,lockerRouter);
