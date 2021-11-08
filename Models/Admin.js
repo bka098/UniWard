@@ -6,6 +6,7 @@ const AdminSchema = mongoose.Schema({
     AdminType:String,
     AdminName:String,
     AdminPassword:String,
-    AdminPhoneNumber:Number
+    AdminPhoneNumber:{type: String,
+        unique: true}
 })
 module.exports = mongoose.model('Admin', AdminSchema);
