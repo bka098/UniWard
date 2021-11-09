@@ -1,23 +1,22 @@
 const mongoose = require('mongoose');
-const { intersects } = require('semver');
 
 const UserSchema = mongoose.Schema({
-    userID : {
+    userId : {
         type: String,
         unique: true
     },
-    UserPassword:String,
-    UserName : String,
-    UserPhoneNumber: {
+    userPassword: String,
+    userName : String,
+    userPhoneNumber: {
         type: String,
         unique: true
     },
-    UserEmail:{
+    userEmail:{
         type: String,
         unique: true
     },
-    UserType: String,
-    UserFacultyType:String
+    userType: String,
+    userFacultyType:String
 })
 
 UserSchema.virtual('id')

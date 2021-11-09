@@ -1,16 +1,19 @@
 const mongoose = require('mongoose');
 
 const OfficeSchema= mongoose.Schema({
-    OfficeID:{
+    officeId:{
         type: String,
         unique: true
     },
-    UserID: {type: mongoose.Schema.Types.ObjectId,
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'},
-    OfficeStatus:String,
-    RequestID:{type: mongoose.Schema.Types.ObjectId,
+    officeStatus: String,
+    requestId: { 
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Request'},
-    OfficeType:String,
-    OfficeLocation:String,    
+    officeType: String,
+    officeLocation: String,    
 })
+
 module.exports = mongoose.model("Offices", OfficeSchema);

@@ -88,7 +88,7 @@ router.post("", (req, res, next) => {
 
   Locker.updateOne({lockerId: req.body.lockerId}, {
     status: "Rented"
-  })
+  });
   const rent = new Rent({
     rentId: req.body.rentId,
     dateOfRent: req.body.dateOfRent,

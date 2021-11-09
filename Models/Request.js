@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
 
 const RequestSchema = mongoose.Schema({
-    RequestID: {type: String,
+    requestId: {
+        type: String,
         unique: true},
-    RequetsStatus:String,
-    UserID:{type: mongoose.Schema.Types.ObjectId,
+    requetsStatus:String,
+    userId:{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'},
-    OfficeID:{type: mongoose.Schema.Types.ObjectId,
+    officeId:{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Offices'},
      
 })
